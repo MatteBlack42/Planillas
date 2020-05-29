@@ -1,0 +1,50 @@
+{%extends 'layout.html'%}
+{%block body%}
+
+<div class="col-md-4 offset-md-4 offset-md-4">
+    <div class="card border-dark mb-3" style="max-width: 20rem;">
+        <div class="card-header">Añadir un empleado</div>
+        <div class="card-body">
+            <form action="{{url_for('add_employeem')}}" method="POST">
+                <div class="form-group">
+                    <label class="col-form-label">Nombre</label>
+                    <input class="form-control" type="text" name="firstname" placeholder="Nombre">
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label">Apellido</label>
+                    <input class="form-control" type="text" name="lastname" placeholder="Apellido">
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label">Fecha de nacimiento</label>
+                    <input class="form-control" type="text" name="dateofbirth" placeholder="Fecha de nacimiento">
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label">Género</label>
+                    <input class="form-control" type="text" name="gender" placeholder="Género">
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label">Fecha de contratación</label>
+                    <input class="form-control" type="text" name="hiredate" placeholder="Fecha de contratación">
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label">Teléfono</label>
+                    <input input class="form-control" type="text" name="phone" placeholder="Teléfono">
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label">Email</label>
+                    <input input class="form-control" type="text" name="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label">Designación</label>
+                    <input input class="form-control" type="text" name="designation" placeholder="Designación">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success btn-lg btn-block">
+                        Guardar
+                    </button>
+                </div>
+            </form>
+        </div>
+      </div>
+</div>
+{%endblock%}
