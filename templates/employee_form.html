@@ -20,7 +20,10 @@
                 </div>
                 <div class="form-group">
                     <label class="col-form-label">Género</label>
-                    <input class="form-control" type="text" name="gender" placeholder="Género">
+                    <select class="form-control" name="gender" placeholder="Género">
+                        <option value="M">Masculino</option>
+                        <option value="F">Femenino</option>
+                    </select>
                 </div>
                 <div class="form-group">
                     <label class="col-form-label">Fecha de contratación</label>
@@ -36,7 +39,11 @@
                 </div>
                 <div class="form-group">
                     <label class="col-form-label">Designación</label>
-                    <input input class="form-control" type="text" name="designation" placeholder="Designación">
+                    <select class="form-control" name="designation" placeholder="Designación">
+                        <option value="Gerente">Gerente</option>
+                        <option value="Empleado">Empleado</option>
+                        <option value="Contratado">Contratado</option>
+                    </select>
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-success btn-lg btn-block">
@@ -45,6 +52,6 @@
                 </div>
             </form>
         </div>
-      </div>
+    </div>
 </div>
 {%endblock%}

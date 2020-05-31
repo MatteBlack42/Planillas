@@ -1,0 +1,60 @@
+{%extends 'layout.html'%}
+{%block body%}
+
+<div class="row">
+    <div class="col-md-5">
+        <div class="card border-dark mb-3" style="max-width: 20rem;">
+            <div class="card-header">Añadir un feriado</div>
+            <div class="card-body">
+                <form action="{{url_for('add_holiday')}}" method="POST">
+                    <div class="form-group">
+                        <label class="col-form-label">Nombre</label>
+                        <input class="form-control" type="text" name="name" placeholder="Nombre">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">Fecha</label>
+                        <input class="form-control" type="text" name="date" placeholder="Fecha">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success btn-lg btn-block">
+                            Guardar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-7">
+        <table class="table table-hover table-dark table-striped">
+            <thead>
+                <tr>
+                    <td>Nombre</td>
+                    <td>Fecha</td>
+                    <td>Opciones</td>
+                </tr>
+            </thead>
+            <tbody>
+                {%for holiday in holidays%}
+                <tr>
+                    <td>{{holiday.1}}</td>
+                    <td>{{holiday.2}}</td>
+                    <td>
+                        <a href="/delete_holiday/{{holiday.0}}" class="btn btn-danger">Eliminar</a>
+                    </td>
+                </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+        {%with messages = get_flashed_messages()%}
+        {%if messages%}
+        {%for message in messages%}
+        <div class="alert alert-dismissible alert-success">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            {{message}}
+        </div>
+        {%endfor%}
+        {%endif%}
+        {%endwith%}
+    </div>
+</div>
+{%endblock%}
