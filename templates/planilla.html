@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planilla</title>
+    <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
+</head>
+<body>
+    <p style="text-align: left;"><span style="color: #808080;">Farmacia Testing S.AC.</span></p>
+    <h4><p style="text-align: center;"><strong>Planilla de pago - Empleados</strong></p></h4>
+<p>&nbsp;</p>
+<table style="height: 106px;" width="977">
+	<tbody>
+		<tr>
+			<td style="width: 317px;">
+				<p><span style="color: #333333;">Id del Empleado: {{employee.0}}</span></p>
+				<p><span style="color: #333333;">Fecha de contratacion: {{employee.5}}</span></p>
+				<p><span style="color: #333333;">Telefono: {{employee.6}}</span></p>
+			</td>
+			<td style="width: 317px;">
+				<p><span style="color: #333333;">Nombre: {{employee.1}}</span></p>
+				<p><span style="color: #333333;">Apellido: {{employee.2}}</span></p>
+				<p><span style="color: #333333;">Email: {{employee.7}}</span></p>
+			</td>
+			<td style="width: 321px;">
+				<p><span style="color: #333333;">Fecha y hora: {{fecha}}</span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p>&nbsp;</p>
+<table style="height: 203px; width: 976px;" class ="table-striped">
+	<tbody>
+		<tr>
+			<td style="width: 367px;">
+				<p>Ganancias</p>
+			</td>
+			<td style="width: 107px;">
+				<p>Monto</p>
+			</td>
+			<td style="width: 376px;">
+				<p>Descuento</p>
+			</td>
+			<td style="width: 98px;">
+				<p>Monto</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 367px;">
+				<p>Remuneraci&oacute;n b&aacute;sica</p>
+			</td>
+			<td style="width: 107px;">
+				<p>{{minimo}}</p>
+			</td>
+			<td style="width: 376px;">
+				<p>AFP - Aporte 10%</p>
+			</td>
+			<td style="width: 98px;">
+				<p>{{afp}}</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 367px;">
+				<p>&nbsp;Bonificaci&oacute;n por cargo</p>
+			</td>
+			<td style="width: 107px;">
+				<p>{{cargo}}</p>
+			</td>
+			<td style="width: 376px;">
+				<p>Licencias</p>
+			</td>
+			<td style="width: 98px;">
+				<p>{{licencias}}</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 367px;">
+				<p><strong>Total de ingresos</strong></p>
+			</td>
+			<td style="width: 107px;">
+				<p>{{tingresos}}</p>
+			</td>
+			<td style="width: 376px;">
+				<p><strong>Total descuentos</strong></p>
+			</td>
+			<td style="width: 98px;">
+				<p>{{tdescuentos}}</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 367px;">
+				<p><strong>Total neto&nbsp;</strong></p>
+			</td>
+			<td style="width: 107px;">
+				<p>{{tneto}}</p>
+			</td>
+			<td style="width: 376px;">
+				<p>&nbsp;</p>
+			</td>
+			<td style="width: 98px;">
+				<p>&nbsp;</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</body>
+</html>
